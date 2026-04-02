@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Investigación de Redes</title>
+<style>
+body{font-family:Arial;margin:0;background:#f4f6f9;}
+header{background:#0b5d5d;color:white;padding:15px;text-align:center;}
+.container{display:flex;}
+nav{width:250px;background:#e9ecef;padding:15px;height:100vh;}
+nav ul{list-style:none;padding:0;}
+nav li{margin:10px 0;}
+nav a{color:#007bff;text-decoration:none;cursor:pointer;}
+main{flex:1;padding:20px;background:white;}
+section{display:none;}
+section.active{display:block;}
+h2{color:#0b5d5d;}
+footer{background:#0b5d5d;color:white;text-align:center;padding:10px;}
+.perfil{text-align:center;margin-top:30px;}
+.perfil img{width:120px;border-radius:50%;}
+</style>
+
+<script>
+function mostrar(id){
+    let secciones = document.querySelectorAll("section");
+    secciones.forEach(sec=>sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+</script>
+
+</head>
+<body>
+
+<header>
+<h1>Investigación sobre Redes</h1>
+<p>ARO Systems</p>
+</header>
+
+<div class="container">
+
+<nav>
+<h3>TEMAS</h3>
+<ul>
+<li><a onclick="mostrar('intro')">Introducción</a></li>
+<li><a onclick="mostrar('osi')">Modelo OSI y TCP/IP</a></li>
+<li><a onclick="mostrar('protocolos')">Protocolos</a></li>
+<li><a onclick="mostrar('topologias')">Topologías</a></li>
+<li><a onclick="mostrar('software')">Software de Red</a></li>
+<li><a onclick="mostrar('dispositivos')">Dispositivos</a></li>
+<li><a onclick="mostrar('cableado')">Cableado UTP</a></li>
+<li><a onclick="mostrar('perfil')">Información</a></li>
+</ul>
+</nav>
+
+<main>
+
+<section id="intro" class="active">
+<h2>Introducción</h2>
+<p>
+Las redes de computadoras son sistemas que permiten la conexión entre diferentes dispositivos como computadoras, celulares y servidores.
+Gracias a ellas se puede compartir información, recursos y servicios a nivel local o mundial.
+Hoy en día son fundamentales para el internet, redes sociales, educación y trabajo.
+</p>
+</section>
+
+<section id="osi">
+<h2>Modelo OSI y TCP/IP</h2>
+<p>
+El modelo OSI divide la comunicación en 7 capas:
+Física, Enlace de datos, Red, Transporte, Sesión, Presentación y Aplicación.
+Cada capa cumple una función específica en la transmisión de datos.
+</p>
+<p>
+El modelo TCP/IP tiene 4 capas:
+Acceso a la red, Internet, Transporte y Aplicación.
+Es el modelo que realmente se usa en internet.
+</p>
+</section>
+
+<section id="protocolos">
+<h2>Protocolos</h2>
+<p>
+Los protocolos son reglas que permiten la comunicación entre dispositivos en una red.
+</p>
+<ul>
+<li><b>HTTP:</b> navegación web</li>
+<li><b>FTP:</b> transferencia de archivos</li>
+<li><b>TCP:</b> transmisión confiable</li>
+<li><b>IP:</b> direccionamiento de dispositivos</li>
+</ul>
+</section>
+
+<section id="topologias">
+<h2>Topologías</h2>
+<p>
+Las topologías indican la forma en que se conectan los dispositivos:
+</p>
+<ul>
+<li><b>Estrella:</b> todos conectados a un punto central</li>
+<li><b>Bus:</b> un solo cable principal</li>
+<li><b>Anillo:</b> conexión circular</li>
+<li><b>Malla:</b> todos conectados entre sí</li>
+</ul>
+</section>
+
+<section id="software">
+<h2>Software de Red y Simuladores</h2>
+<p>
+El software de red permite configurar, monitorear y administrar redes.
+</p>
+<p>
+Packet Tracer es un simulador que permite crear redes virtuales para practicar sin usar equipos reales.
+Es muy usado en educación.
+</p>
+</section>
+
+<section id="dispositivos">
+<h2>Dispositivos de Red</h2>
+<ul>
+<li><b>Router:</b> conecta redes diferentes</li>
+<li><b>Switch:</b> conecta dispositivos en una red</li>
+<li><b>Hub:</b> distribuye señal</li>
+<li><b>PC:</b> equipo final del usuario</li>
+</ul>
+</section>
+
+<section id="cableado">
+<h2>Código de colores (Cableado UTP)</h2>
+<p>
+El cable UTP usa colores para organizar los pares:
+</p>
+<ul>
+<li>Blanco/Naranja</li>
+<li>Naranja</li>
+<li>Blanco/Verde</li>
+<li>Azul</li>
+<li>Blanco/Azul</li>
+<li>Verde</li>
+<li>Blanco/Marrón</li>
+<li>Marrón</li>
+</ul>
+</section>
+
+<section id="perfil">
+<h2>Información del Estudiante</h2>
+<div class="perfil">
+<img src="https://i.imgur.com/your-image.jpg">
+<p><b>Nombre:</b> Diego Armando</p>
+<p><b>Curso:</b> Redes</p>
+<p><b>Institución:</b> U.B.I.</p>
+</div>
+</section>
+
+</main>
+</div>
+
+<footer>
+<p>ARO Systems © 2026</p>
+</footer>
+
+</body>
+</html>
